@@ -1,0 +1,2 @@
+learning_rate,hidden_size,dropout,num_layers,batch_size,epochs,BestScore
+0.000100922339122512,256,0.20735865911439758,4,64,46,281.0236033236354

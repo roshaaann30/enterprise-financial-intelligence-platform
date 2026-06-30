@@ -1,0 +1,21 @@
+FinancialHealth,BankruptcyRisk,CreditRisk,InvestmentScore,QualityScore,QualityRating,Recommendation
+91,8,12,84,88.65,Excellent,Strong Company
+82,15,18,76,80.20,Excellent,Strong Company
+68,35,40,61,67.55,Average,Monitor Closely
+55,60,70,45,47.75,Weak,High Risk
+95,5,10,92,93.25,Elite,World Class Company
+88,12,15,81,84.50,Excellent,Strong Company
+74,25,30,72,72.40,Good,Stable Company
+63,40,45,58,60.15,Average,Monitor Closely
+45,75,80,35,37.50,Poor,Avoid
+78,20,25,77,77.85,Good,Stable Company
+86,10,14,79,82.90,Excellent,Strong Company
+70,32,38,65,69.10,Average,Monitor Closely
+58,55,62,50,52.40,Weak,High Risk
+93,7,11,88,90.60,Elite,World Class Company
+80,18,20,75,79.85,Good,Stable Company
+66,42,48,57,61.20,Average,Monitor Closely
+52,68,72,42,44.90,Weak,High Risk
+97,3,5,94,95.80,Elite,World Class Company
+84,16,19,80,81.75,Excellent,Strong Company
+72,28,35,68,71.40,Good,Stable Company
