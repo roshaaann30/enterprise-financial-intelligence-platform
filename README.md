@@ -230,8 +230,8 @@ python -m pytest tests/test_e2e_pipeline.py
 # 📸 Screenshots
 
 ## Dashboard
+<img width="1853" height="888" alt="image" src="https://github.com/user-attachments/assets/762e0ddd-8959-40c8-8841-6ea08062ed75" />
 
-![Dashboard](screenshots/dashboard.png)
 
 ## Forecasting
 
