@@ -17,6 +17,7 @@ import Monitoring from "./pages/Monitoring";
 import Explainability from "./pages/Explainability";
 import SystemStatus from "./pages/SystemStatus";
 import MLflow from "./pages/MLflow";
+import DVC from "./pages/DVC";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         {/* Dashboard */}
         <Route path="/" element={<Dashboard />} />
 
-        {/* Core Analytics */}
+        {/* Analytics */}
         <Route path="/company" element={<Company />} />
         <Route path="/forecasts" element={<Forecasts />} />
         <Route path="/portfolio" element={<Portfolio />} />
@@ -36,15 +37,16 @@ function App() {
         <Route path="/chat" element={<AIChat />} />
         <Route path="/scenario" element={<Scenario />} />
 
-        {/* AI Governance */}
+        {/* Governance */}
         <Route path="/monitoring" element={<Monitoring />} />
         <Route path="/explainability" element={<Explainability />} />
         <Route path="/system" element={<SystemStatus />} />
 
         {/* MLOps */}
         <Route path="/mlflow" element={<MLflow />} />
+        <Route path="/dvc" element={<DVC />} />
 
-        {/* Fallback Route */}
+        {/* Fallback */}
         <Route
           path="*"
           element={<Navigate to="/" replace />}

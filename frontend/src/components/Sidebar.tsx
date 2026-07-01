@@ -54,6 +54,8 @@ export default function Sidebar() {
         </p>
       </div>
 
+      {/* Overview */}
+
       <div
         style={{
           color: "#64748B",
@@ -81,6 +83,8 @@ export default function Sidebar() {
       <Link to="/portfolio" style={linkStyle}>
         💼 Portfolio Advisor
       </Link>
+
+      {/* Intelligence */}
 
       <div
         style={{
@@ -111,6 +115,8 @@ export default function Sidebar() {
         🧪 Scenario Simulator
       </Link>
 
+      {/* Governance */}
+
       <div
         style={{
           color: "#64748B",
@@ -136,6 +142,8 @@ export default function Sidebar() {
         🛡 System Status
       </Link>
 
+      {/* MLOps */}
+
       <div
         style={{
           color: "#64748B",
@@ -151,6 +159,10 @@ export default function Sidebar() {
 
       <Link to="/mlflow" style={linkStyle}>
         ⚙️ MLflow Tracking
+      </Link>
+
+      <Link to="/dvc" style={linkStyle}>
+        📦 DVC Versioning
       </Link>
 
       <div
@@ -199,7 +211,7 @@ export default function Sidebar() {
             marginTop: "10px",
           }}
         >
-          Version 19.5
+          Version 19.6
         </div>
       </div>
     </aside>

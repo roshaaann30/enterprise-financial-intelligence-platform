@@ -13,6 +13,7 @@ from app.api.explainability_api import router as explainability_router
 from app.api.scenario_api import router as scenario_router
 from app.api.system_api import router as system_router
 from app.api.mlflow_api import router as mlflow_router
+from app.api.dvc_api import router as dvc_router
 
 app = FastAPI(
     title="Enterprise Financial Intelligence Platform",
@@ -39,6 +40,7 @@ app.include_router(explainability_router)
 app.include_router(scenario_router)
 app.include_router(system_router)
 app.include_router(mlflow_router)
+app.include_router(dvc_router)
 
 
 @app.get("/")
@@ -56,3 +58,6 @@ def root():
             "Online"
 
     }
+
+for route in app.routes:
+    print(route)
