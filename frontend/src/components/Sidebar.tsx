@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function Sidebar() {
+const SIDEBAR_WIDTH = 280;
 
+export default function Sidebar() {
   const linkStyle = {
     color: "#E5E7EB",
     textDecoration: "none",
@@ -10,39 +11,33 @@ export default function Sidebar() {
     display: "block",
     fontSize: "15px",
     fontWeight: 500,
+    marginBottom: "4px",
   };
 
   return (
-
-    <div
+    <aside
       style={{
-        width: "280px",
+        width: `${SIDEBAR_WIDTH}px`,
         height: "100vh",
-        backgroundColor: "#0F172A",
+        backgroundColor: "#071633",
         position: "fixed",
         left: 0,
         top: 0,
-        padding: "24px",
         borderRight: "1px solid #1F2937",
-
         overflowY: "auto",
         overflowX: "hidden",
+        padding: "24px",
+        boxSizing: "border-box",
+        zIndex: 1000,
       }}
     >
-
-      {/* Header */}
-
-      <div
-        style={{
-          marginBottom: "35px",
-        }}
-      >
-
+      <div style={{ marginBottom: "40px" }}>
         <h1
           style={{
             color: "white",
-            marginBottom: "5px",
-            fontSize: "56px",
+            fontSize: "58px",
+            margin: 0,
+            lineHeight: 1,
           }}
         >
           EFIP
@@ -52,22 +47,20 @@ export default function Sidebar() {
           style={{
             color: "#9CA3AF",
             fontSize: "12px",
+            marginTop: "10px",
           }}
         >
           Enterprise Financial Intelligence Platform
         </p>
-
       </div>
-
-      {/* Overview */}
 
       <div
         style={{
-          color: "#6B7280",
+          color: "#64748B",
           fontSize: "12px",
-          marginBottom: "10px",
-          textTransform: "uppercase",
           fontWeight: "bold",
+          marginBottom: "12px",
+          textTransform: "uppercase",
         }}
       >
         Overview
@@ -89,16 +82,14 @@ export default function Sidebar() {
         💼 Portfolio Advisor
       </Link>
 
-      {/* Intelligence */}
-
       <div
         style={{
-          marginTop: "25px",
-          marginBottom: "10px",
-          color: "#6B7280",
+          color: "#64748B",
           fontSize: "12px",
-          textTransform: "uppercase",
           fontWeight: "bold",
+          marginTop: "30px",
+          marginBottom: "12px",
+          textTransform: "uppercase",
         }}
       >
         Intelligence
@@ -120,16 +111,14 @@ export default function Sidebar() {
         🧪 Scenario Simulator
       </Link>
 
-      {/* AI Governance */}
-
       <div
         style={{
-          marginTop: "25px",
-          marginBottom: "10px",
-          color: "#6B7280",
+          color: "#64748B",
           fontSize: "12px",
-          textTransform: "uppercase",
           fontWeight: "bold",
+          marginTop: "30px",
+          marginBottom: "12px",
+          textTransform: "uppercase",
         }}
       >
         AI Governance
@@ -140,30 +129,43 @@ export default function Sidebar() {
       </Link>
 
       <Link to="/explainability" style={linkStyle}>
-        🧠 Explainable AI
+        🧠 Explainability
       </Link>
 
       <Link to="/system" style={linkStyle}>
         🛡 System Status
       </Link>
 
-      {/* Footer Card */}
+      <div
+        style={{
+          color: "#64748B",
+          fontSize: "12px",
+          fontWeight: "bold",
+          marginTop: "30px",
+          marginBottom: "12px",
+          textTransform: "uppercase",
+        }}
+      >
+        MLOps
+      </div>
+
+      <Link to="/mlflow" style={linkStyle}>
+        ⚙️ MLflow Tracking
+      </Link>
 
       <div
         style={{
           marginTop: "40px",
-          marginBottom: "30px",
-
-          background: "#111827",
-          border: "1px solid #374151",
+          padding: "16px",
+          background: "#0B1D44",
+          border: "1px solid #1E3A8A",
           borderRadius: "12px",
-          padding: "15px",
         }}
       >
-
         <h4
           style={{
             color: "white",
+            marginTop: 0,
             marginBottom: "10px",
           }}
         >
@@ -174,7 +176,7 @@ export default function Sidebar() {
           style={{
             color: "#9CA3AF",
             fontSize: "12px",
-            marginBottom: "10px",
+            marginBottom: "12px",
           }}
         >
           Multi-Agent Financial Intelligence Platform
@@ -182,9 +184,9 @@ export default function Sidebar() {
 
         <div
           style={{
-            color: "#10B981",
-            fontWeight: "bold",
+            color: "#22C55E",
             fontSize: "12px",
+            fontWeight: "bold",
           }}
         >
           ● System Online
@@ -193,17 +195,13 @@ export default function Sidebar() {
         <div
           style={{
             color: "#9CA3AF",
-            marginTop: "10px",
             fontSize: "11px",
+            marginTop: "10px",
           }}
         >
-          Version 18.19
+          Version 19.5
         </div>
-
       </div>
-
-    </div>
-
+    </aside>
   );
-
 }

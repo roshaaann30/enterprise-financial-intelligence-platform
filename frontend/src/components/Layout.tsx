@@ -1,30 +1,36 @@
 import Sidebar from "./Sidebar";
 
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const SIDEBAR_WIDTH = 280;
+
 export default function Layout({
-
   children,
-
-}: any) {
-
+}: LayoutProps) {
   return (
-
-    <div>
-
+    <div
+      style={{
+        background: "#0B1020",
+        minHeight: "100vh",
+      }}
+    >
       <Sidebar />
 
-      <div
+      <main
         style={{
-          marginLeft: "250px",
-          padding: "20px",
+          marginLeft: `${SIDEBAR_WIDTH}px`,
+          width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
+          minHeight: "100vh",
+          padding: "32px",
+          boxSizing: "border-box",
+          overflowX: "hidden",
+          color: "white",
         }}
       >
-
         {children}
-
-      </div>
-
+      </main>
     </div>
-
   );
-
 }

@@ -12,6 +12,7 @@ from app.api.timeline_api import router as timeline_router
 from app.api.explainability_api import router as explainability_router
 from app.api.scenario_api import router as scenario_router
 from app.api.system_api import router as system_router
+from app.api.mlflow_api import router as mlflow_router
 
 app = FastAPI(
     title="Enterprise Financial Intelligence Platform",
@@ -37,6 +38,7 @@ app.include_router(timeline_router)
 app.include_router(explainability_router)
 app.include_router(scenario_router)
 app.include_router(system_router)
+app.include_router(mlflow_router)
 
 
 @app.get("/")
