@@ -15,6 +15,7 @@ from app.api.mlflow_api import router as mlflow_router
 from app.api.dvc_api import router as dvc_router
 from app.api.portfolio_api import router as portfolio_router
 from routes.portfolio_risk import router as portfolio_risk_router
+from routes.market_data import router as market_data_router
 
 app = FastAPI(
     title="Enterprise Financial Intelligence Platform",
@@ -43,6 +44,8 @@ app.include_router(system_router)
 app.include_router(mlflow_router)
 app.include_router(dvc_router)
 app.include_router(portfolio_risk_router)
+app.include_router(market_data_router)
+
 
 @app.get("/")
 def root():

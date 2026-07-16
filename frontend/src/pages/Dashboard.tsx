@@ -15,6 +15,8 @@ export default function Dashboard() {
     risk_score: 0,
   });
 
+  const [marketData, setMarketData] = useState<any[]>([]);
+
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8000/dashboard")
@@ -29,6 +31,15 @@ export default function Dashboard() {
       .get("http://127.0.0.1:8000/portfolio-risk")
       .then((response) => {
         setRiskData(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    axios
+      .get("http://127.0.0.1:8000/market-data")
+      .then((response) => {
+        setMarketData(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -154,6 +165,35 @@ export default function Dashboard() {
             title="Risk Score"
             value={riskData.risk_score}
           />
+        </div>
+
+        {/* Market Overview */}
+
+        <h2
+          style={{
+            textAlign: "center",
+            marginTop: "50px",
+            marginBottom: "30px",
+          }}
+        >
+          Market Overview
+        </h2>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {marketData.map((stock) => (
+            <KPICard
+              key={stock.ticker}
+              title={stock.ticker}
+              value={`$${stock.price}`}
+            />
+          ))}
         </div>
       </div>
     </Layout>
